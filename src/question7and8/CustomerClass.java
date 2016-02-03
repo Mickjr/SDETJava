@@ -1,4 +1,4 @@
-package question7;
+package question7and8;
 
 public class CustomerClass {
 	
@@ -13,11 +13,11 @@ public class CustomerClass {
 	}
 	
 	public void myMethod(){
-		
+		System.out.println("Hello5");
 	}
 	
 	public void myMethod(int x, String str){
-		
+		System.out.println(x + " " + str);
 	}
 	
 	static int counter;
@@ -27,11 +27,12 @@ public class CustomerClass {
 	}
 	
 	public static void myMethod2(){
-		
+		System.out.println("Hello1");
 	}
 	
 	public static void myMethod3(float f){
 		f = MYFLOAT;
+		System.out.println(f);
 	}
 	
 	
