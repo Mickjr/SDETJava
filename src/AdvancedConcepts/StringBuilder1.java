@@ -6,8 +6,12 @@ public class StringBuilder1 {
 
 	public static void main(String[] args) {
 		
+		//String objects
+		
+		
+		
 		//String for Tokenizer
-		String str = "Manton:Horton";
+		String str = "pickles:ketchup:mustard:onion";
 		
 		//StringTokenizer
 		StringTokenizer tokenizer = new StringTokenizer(str, ":");
@@ -41,6 +45,9 @@ public class StringBuilder1 {
 		//Combine two StringBuilders.
 		sb1.append(sb2);
 		System.out.println(sb1);
+		
+		//Request garbage Collection
+		System.gc();
 				
     }
 
