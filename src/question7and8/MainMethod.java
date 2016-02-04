@@ -7,8 +7,8 @@ public class MainMethod {
 		CustomerClass mycustomer1 = new CustomerClass();
 		CustomerClass mycustomer2 = new CustomerClass();
 		
-		mycustomer1.myMethod2();
-		mycustomer2.myMethod3(0);
+		CustomerClass.myMethod2();
+		CustomerClass.myMethod3(0);
 		mycustomer1.myMethod();
 		mycustomer2.myMethod(1, "okay");
 

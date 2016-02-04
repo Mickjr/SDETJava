@@ -6,10 +6,6 @@ public class StringBuilder1 {
 
 	public static void main(String[] args) {
 		
-		//String objects
-		
-		
-		
 		//String for Tokenizer
 		String str = "pickles:ketchup:mustard:onion";
 		
