@@ -1,14 +1,29 @@
 package AdvancedConcepts;
 
+import java.util.StringTokenizer;
+
 public class StringBuilder1 {
 
 	public static void main(String[] args) {
+		
+		//String for Tokenizer
+		String str = "Manton:Horton";
+		
+		//StringTokenizer
+		StringTokenizer tokenizer = new StringTokenizer(str, ":");
 		
 		//Create new StringBuilder
 		StringBuilder sb = new StringBuilder("car");
 		StringBuilder sb1 = new StringBuilder("High");
 		StringBuilder sb2 = new StringBuilder("school");
 		StringBuilder sb3 = new StringBuilder();
+		
+		//Use Tokenizer
+		while(tokenizer.hasMoreTokens()){
+			System.out.println(tokenizer.nextToken());
+		}
+		
+		//Append eIntern to sb3
 		sb3.append("eIntern");
 
 		//Get substring after the first two characters.
