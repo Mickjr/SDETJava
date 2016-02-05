@@ -14,8 +14,7 @@ public class MainClass {
 		MammalClass.walk();
 		three.eat();
 		three.move();
-		HumanClass.walk();
-		
+		HumanClass.walk();		
 	}
 
 }
