@@ -26,7 +26,6 @@ public class FileI {
 		try {
 			enoffile = br.readLine();
 		} catch (IOException e2) {
-			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
 		while(enoffile !=null){

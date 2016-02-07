@@ -3,7 +3,7 @@ package question4;
 public class MethodsPerameters {
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		double num1 = 2;
 		double num2 = 4;
 		System.out.println(sum(num1, num2));
