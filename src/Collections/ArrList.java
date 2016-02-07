@@ -1,5 +1,6 @@
 package Collections;
 
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -23,7 +24,7 @@ public class ArrList {
 	Iterator<String> iterator = list.iterator();
 	System.out.println("Array List data: ");
 	
-	//Display Hash set data
+	//Display Array List data
 	while (iterator.hasNext()){
 		System.out.println(iterator.next() +"");
 	}

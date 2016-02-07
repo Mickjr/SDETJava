@@ -23,7 +23,7 @@ public class LinkList {
 		Iterator<String> iterator = list.iterator();
 		System.out.println("Linked List data: ");
 		
-		//Display Hash set data
+		//Display LinkedList data
 		while (iterator.hasNext()){
 			System.out.println(iterator.next() +"");
 		}
