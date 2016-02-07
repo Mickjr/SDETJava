@@ -3,102 +3,86 @@ package question37;
 import  java.util.Scanner;
 
 public class GradesStatistics {
-    
-    private final int GRADE_MINIMUM = 0;
-    private final int GRADE_MAXIMUM = 100;
-    
-    private int[] grades;
-   
-    // main() method
-    public static void main(String[] args)
-    {
-        GradesStatistics aGradesStatistics = new GradesStatistics();
-       
-        aGradesStatistics.readGrades();
-        System.out.printf("The average is %1$.2f\n", aGradesStatistics.average());
-        System.out.printf("The minimum is %1$d\n", aGradesStatistics.min());
-        System.out.printf("The maximum is %1$d\n", aGradesStatistics.max());
-        System.out.printf("The standard deviation is %1$.15f \n", aGradesStatistics.stdDev());
+	public static int[] grades;
+	
+	public static void main(String[] args)  {
+        readGrades();
+        System.out.println("The average is " + average());
+        System.out.println("The minimum is " + min());
+        System.out.println("The maximum is " + max());
+        System.out.println("The standard deviation is " + stdDev());
     }
-   
-    // read students' grades
-    private void readGrades()
-    {
+    
+	public static void readGrades() {
+        int numStudents;
         @SuppressWarnings("resource")
 		Scanner in = new Scanner(System.in);
+        
         System.out.print("Enter the number of students: ");
-        int numberStudens = in.nextInt();
-       
-        grades = new int[numberStudens];
-                
-        int i = 0;
-        while (i < numberStudens)
-        {
-            System.out.printf("Enter the grade for student %1$d: ", (i+1));
-            int grade = in.nextInt();
-            if (GRADE_MINIMUM <= grade && grade <= GRADE_MAXIMUM)
-            {
-                grades[i] = grade;
-                i++;
-            }
-            else {
-                System.out.println("Error! Grade must be integer between 0 and 100!");
-            }
-        }
-    } 
-    
-    private int min()
-    {
-        if (grades.length == 0) {
-            return 0;
-        }
-
-        int min = grades[0];
-        for (int i = 0; i < grades.length; i++) {
-            min = (min > grades[i]) ? grades[i] : min;
-        }
-        return min;
-    }
-    
-    private int max()
-    {
-        if (grades.length == 0) {
-            return 0;
-        }
-
-        int max = grades[0];
-        for (int i = 0; i < grades.length; i++) {
-            max = (max < grades[i]) ? grades[i] : max;
-        }
-        return max;
-    }
-
-    private double average()
-    {        
-        if (grades.length == 0) {
-            return 0.0;
+        numStudents = in.nextInt();
+        grades = new int[numStudents];
+        
+        for(int i = 0; i < numStudents; i++)   {
+            do  {
+                System.out.print("Enter the grade for student " + (i+1) + ": ");
+                grades[i] = in.nextInt();
+                if(grades[i] > 100 || grades[i] < 0)   
+                    System.out.println("Invalid grade, try again...");
+            } while(grades[i] > 100 || grades[i] < 0);
         }
         
-        double sum = 0.0;
-        for (int i = 0; i < grades.length; i++) {
+    }
+    
+	public static double average()  {
+        int sum = 0;
+        double average;
+        
+        for(int i = 0; i < grades.length; i++)  {
             sum += grades[i];
         }
-        return (sum / grades.length);
-    }
+        average = (double)sum / (double)grades.length;
         
-    private double stdDev()
-    {
-        if (grades.length == 0) {
-            return 0f;
+        return average;
+    }
+	
+	public static int min() {
+        int min = grades[0];
+        
+        for(int i = 0; i < grades.length; i++)  {
+            if(min > grades[i])
+                min = grades[i];
         }
         
-        double avg = average();
-        double sum = 0;
-        for(int i = 0; i < grades.length; i++) {
-            sum += grades[i] * grades[i] - avg * avg;
-        }        
-        return Math.sqrt(sum / grades.length);
+        return min;
     }
-    
-    
+	
+	public static int max() {
+        int max = grades[0];
+        
+        for(int i = 0; i < grades.length; i++)  {
+            if(max < grades[i])
+                max = grades[i];
+        }
+        
+        return max;
+    }
+	
+	public static double stdDev()   {
+        double sum = 0;
+        double variance = 0;
+        double mean = average();
+        
+        for(int i = 0; i < grades.length; i++)  {
+            sum += ((double)grades[i] - mean) * ((double)grades[i] - mean);
+        }
+        variance = sum / grades.length;
+        
+        return Math.sqrt(variance);
+    }
+	
+	
 }
+	
+	
+
+    
