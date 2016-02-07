@@ -14,7 +14,7 @@ public class ThreadTest extends Thread {
 		      {
 		        for (int i=0 ;i<10;i++)
 		        {
-		          System.out.println("Printing the count " + i);
+		          System.out.println("Printing the set " + i);
 		          Thread.sleep(1000);
 		        }
 		     }
