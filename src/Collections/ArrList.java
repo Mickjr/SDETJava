@@ -1,8 +1,11 @@
 package Collections;
 
 
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
+
 
 public class ArrList {
 	
@@ -20,14 +23,31 @@ public class ArrList {
 		System.out.println("Array List size: "+ list.size());
 	}
 	
-	//Sort ArrayList data
+	//Iterate ArrayList data
 	Iterator<String> iterator = list.iterator();
 	System.out.println("Array List data: ");
 	
-	//Display Array List data
+	
+	//Display Iterated Array List data
 	while (iterator.hasNext()){
 		System.out.println(iterator.next() +"");
 	}
+	
+
+	//Unsorted List//
+    System.out.println("Before Sorting:");
+    for(String counter: list){
+		System.out.println(counter);
 	}
+   
+    //Sort statement//
+    Collections.sort(list);
+   
+    //Sorted List//
+    System.out.println("After Sorting:");
+    for(String counter: list){
+		System.out.println(counter);
+	 }
+  }
 }
 

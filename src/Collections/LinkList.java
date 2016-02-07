@@ -1,5 +1,6 @@
 package Collections;
 
+
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -19,7 +20,7 @@ public class LinkList {
 			System.out.println("Linked List size: "+ list.size());
 		}
 		
-		//Sort LinkedList data
+		//Iterated LinkedList data
 		Iterator<String> iterator = list.iterator();
 		System.out.println("Linked List data: ");
 		
@@ -28,5 +29,8 @@ public class LinkList {
 			System.out.println(iterator.next() +"");
 		}
 		
+		//Sort Link list
+		
 	}
 }
+

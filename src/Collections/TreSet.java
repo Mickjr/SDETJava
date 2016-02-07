@@ -32,6 +32,9 @@ public class TreSet {
 		while (iterator.hasNext()){
 			System.out.println(iterator.next() +"");
 		}
+		
+		//Unsorted TreeSet
+		System.out.println("Before Sorting: " +tree);
 				
 	}
 		

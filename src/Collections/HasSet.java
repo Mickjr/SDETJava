@@ -1,7 +1,9 @@
 package Collections;
 
+
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.TreeSet;
 
 public class HasSet {
 
@@ -28,6 +30,22 @@ public class HasSet {
 		while (iterator.hasNext()){
 			System.out.println(iterator.next() +"");
 		}
+		
+		//Unsorted Hash Set
+		System.out.println("Before Sorting: ");
+		for(Integer counter: set){
+			System.out.println(counter);
+		}
+		
+		//Sort Hash Set using TreeSet
+		TreeSet<Integer> tset = new TreeSet<Integer>(set);
+		System.out.println("After Sorting elements in HashSet using TreeSet: ");
+		System.out.println(tset);
+		
+		
+		
+		
+		
 		
 	}
 
